@@ -47,4 +47,8 @@ public class ActorEntity {
     public void setMovies(List<MovieEntity> movies) {
         this.movies = movies;
     }
+
+    public ActorEntity(String actorName) {
+        this.actorName = actorName;
+    }
 }

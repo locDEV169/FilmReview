@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "review")
 public class ReviewEntity {
     @EmbeddedId
-    private  ReviewID reviewID;
+    private ReviewID reviewID;
     @ManyToOne
     @MapsId("userID")
     private UserEntity user;
@@ -19,5 +19,17 @@ public class ReviewEntity {
     private String review;
     @Column
     private int rating;
+
+    public ReviewEntity() {
+
+    }
+
+    public ReviewEntity(UserEntity user, MovieEntity movie) {
+
+        this.user = user;
+        this.movie = movie;
+        this.reviewID = new ReviewID(movie.getMovieID(), user.getUserID());
+    }
+
 
 }

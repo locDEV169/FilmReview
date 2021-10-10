@@ -37,4 +37,8 @@ public class GenreEntity {
     public void setMovies(List<MovieEntity> movies) {
         this.movies = movies;
     }
+
+    public GenreEntity(String genreName, List<MovieEntity> movies) {
+        this.genreName = genreName;
+    }
 }

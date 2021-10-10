@@ -37,5 +37,9 @@ public class DirectorEntity {
     public void setMovies(List<MovieEntity> movies) {
         this.movies = movies;
     }
+
+    public DirectorEntity(String drirectorName) {
+        this.drirectorName = drirectorName;
+    }
 }
 

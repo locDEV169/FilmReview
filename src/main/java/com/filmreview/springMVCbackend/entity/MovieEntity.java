@@ -47,7 +47,7 @@ public class MovieEntity implements Serializable {
     private List<GenreEntity> genres = new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
-    private  List<ReviewEntity> users;
+    private List<ReviewEntity> users;
 
 
     public List<ActorEntity> getActors() {
@@ -136,5 +136,15 @@ public class MovieEntity implements Serializable {
 
     public void setGenres(List<GenreEntity> genres) {
         this.genres = genres;
+    }
+
+    public MovieEntity(String title, int userRate, double imdbRate, int years, String imgURL, String plot, int runtime) {
+        this.title = title;
+        this.userRate = userRate;
+        this.imdbRate = imdbRate;
+        this.years = years;
+        this.imgURL = imgURL;
+        this.plot = plot;
+        this.runtime = runtime;
     }
 }
