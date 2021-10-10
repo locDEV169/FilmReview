@@ -14,6 +14,10 @@ public class DirectorEntity {
     @ManyToMany(mappedBy = "directors")
     private List<MovieEntity> movies = new ArrayList<>();
 
+    public DirectorEntity() {
+
+    }
+
     public int getDirectorID() {
         return directorID;
     }

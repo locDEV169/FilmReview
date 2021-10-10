@@ -14,6 +14,10 @@ public class ActorEntity {
     @ManyToMany(mappedBy = "actors")
     private List<MovieEntity> movies = new ArrayList<>();
 
+    public ActorEntity() {
+
+    }
+
 
     public int getActorId() {
         return actorId;
